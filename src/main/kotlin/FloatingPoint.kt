@@ -43,8 +43,8 @@ infix fun IntArray.shr(shift: Int): IntArray {
 }
 
 fun sumDoubleFloatingPointBinaries(x: IntArray, y: IntArray): IntArray {
-    var (sign1, exp1, man1) = getIEEE754Components(x)
-    var (sign2, exp2, man2) = getIEEE754Components(y)
+    var (_, exp1, man1) = getIEEE754Components(x)
+    var (_, exp2, man2) = getIEEE754Components(y)
 
     val diff = (exp1 - exp2).set(0, 0)
     var exp3: DirectBinary
